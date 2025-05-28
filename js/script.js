@@ -1,9 +1,11 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import gsap from 'gsap';
 
 const swiper = new Swiper('.swiper', {
   // Optional parameters
@@ -41,3 +43,32 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-scrollbar',
   },
 });
+//apply some gsap 
+const timeLineGsap = gsap.timeline()
+
+window.addEventListener('DOMContentLoaded',()=>{
+
+timeLineGsap.from('.hero__content h1',{
+   opacity:0,
+   scale:1.5,
+   duration:2
+})
+
+timeLineGsap.from('.hero__content .container >div> p',{
+    opacity:0,
+    translateX:-100
+})
+timeLineGsap.from('.hreflink',{
+    opacity:0,
+    translateY:100,
+      onComplete: () => {
+    gsap.set(".hreflink", { clearProps: "all" }); // removes all inline styles set by GSAP
+  }
+   
+})
+timeLineGsap.from('.hero-bkground',{
+  translateX:1000,
+  rotate:90,
+  duration:1.5
+})
+})

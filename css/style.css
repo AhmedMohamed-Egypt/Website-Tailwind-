@@ -35,6 +35,10 @@
 .hero-bkground{
   @apply  ml-auto lg:m-0 lg:transform-none translate-y-[-65px]   relative lg:absolute  w-[600px] 2xl:w-[600px] 2xl:h-[635px] xl:w-[500px] xl:h-[450px] lg:w-[400px] lg:h-[350px] max-w-full  right-0 top-0 z-[-1];
 }
+.hreflink:hover{
+ transition: all 1s ease-out;
+ duration:1s
+}
 .half-circle-bottom {
       width: 100px;
       height: 50px;
