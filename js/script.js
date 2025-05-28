@@ -71,4 +71,8 @@ timeLineGsap.from('.hero-bkground',{
   rotate:90,
   duration:1.5
 })
+timeLineGsap.from('.hero-bkground >div',{
+  opacity:0,
+  duration:1
+})
 })
