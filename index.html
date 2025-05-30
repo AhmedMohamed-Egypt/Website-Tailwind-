@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-
-
-      <link href="./css/style.css" rel="stylesheet">
- 
-   
+    <title>Craft Tailwind</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
     <div class="heroArea">
@@ -70,7 +66,7 @@
     <div class="hero__content ">
         <div class="container mx-auto mt-[100px]" >
             <div class="w-[600px]">
-  <h1 class="2xl:text-[72px] xl-text-[56px]  md-text-[50px] text-[45px]  font-bold color-[#0F172A]  leading-tight ">Get the Sun to Power Your Home</h1>
+  <h1 class="invisible 2xl:text-[72px] xl-text-[56px]  md-text-[50px] text-[45px]  font-bold color-[#0F172A]  leading-tight ">Get the Sun to Power Your Home</h1>
      <p class="color-[#0F172A] text-[24px] my-[30px]">Viverra viverra nibh enim et aliquam, enim. Tempor, sit mus viverra orci dui consequat turpis scelerisque.</p>
      <a href="#" class="     hreflink
      items-center justify-center
@@ -106,12 +102,12 @@
     </div>
      </div>
     </div>
-    <section class="pick-sun padding-section">
+    <section class="pick-sun padding-section ">
    <div class="container  mx-auto relative overflow-hidden">
     <h4 class="h4-heading">No More Waste</h4>
     <h2 class="h2-heading">Pick the Sun</h2>
     <p class="text-[18px] text-blue-900 font-normal w-[850px] text-center mx-auto max-w-[90%] ">Et pulvinar nec interdum integer id urna molestie porta nullam. A, donec ornare sed turpis pulvinar purus maecenas quam a. Erat porttitor pharetra sed in mauris elementum sollicitudin.</p>
-    <div class="mt-[25px]">
+    <div class="mt-[25px] pick-sun__parent invisible">
         <div class="lg:w-[80%] lg:h-[700px] w-[100%] h-[500px] mx-auto relative  flex">
 
             <img src="./imgs/Desktop.png" class="block mx-auto w-full" alt="">
@@ -124,11 +120,11 @@
 </div>
             
         </div>
-        <div class="pick-sun__leftimg absolute left-0 z-[-1] lg:top-0 bottom-[-150px] lg:bottom-0">
+        <div class="pick-sun__leftimg invisible absolute left-0 z-[-1] lg:top-0 bottom-[-150px] lg:bottom-0">
             <div class="translate-x-[140px] translate-y-[100px]  w-[130px] h-[130px] absolute top-[50px] bg-[#FBBF24] rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300 hover:animate-pulse-slow"></div>
             <img src="./imgs/left-ellipse.png" alt=""/>
         </div>
-        <div class="translate-x-[120px] translate-y-[180px] w-[250px] h-[250px]  lg:w-[420px] lg:h-[420px] rounded-full bg-[#7E22CE] absolute right-0 top-0 z-[-1]">
+        <div class="rightPurple invisible translate-x-[120px] translate-y-[180px] w-[250px] h-[250px]  lg:w-[420px] lg:h-[420px] rounded-full bg-[#7E22CE] absolute right-0 top-0 z-[-1]">
              
         </div>
           <div class="half-circle-bottom bg-purple-700 absolute bottom-0 translate-y-[-250px] translate-x-[150px]"></div>

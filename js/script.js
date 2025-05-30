@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const swiper = new Swiper('.swiper', {
   // Optional parameters
@@ -46,10 +47,41 @@ const swiper = new Swiper('.swiper', {
 //apply some gsap 
 const timeLineGsap = gsap.timeline()
 
-window.addEventListener('DOMContentLoaded',()=>{
+
+gsap.registerPlugin(ScrollTrigger)
+const triggerConfig = {
+  
+
+ trigger:".pick-sun",
+     start:"top 50%", 
+};
+
+ gsap.from(".pick-sun__parent",{
+  scrollTrigger:triggerConfig,
+  autoAlpha:0,
+  translateY:500,
+  opacity:0,
+  duration:1,
+})
+gsap.from(".pick-sun__leftimg",{
+  scrollTrigger:triggerConfig,
+  autoAlpha:0,
+  translateX:-1500,
+  opacity:0,
+   duration:1,
+
+})
+gsap.from(".rightPurple",{
+  scrollTrigger:triggerConfig,
+  autoAlpha:0,
+  translateX:1500,
+  opacity:0,
+   duration:1,
+
+})
 
 timeLineGsap.from('.hero__content h1',{
-   opacity:0,
+   autoAlpha:0,
    scale:1.5,
    duration:2
 })
@@ -64,15 +96,10 @@ timeLineGsap.from('.hreflink',{
       onComplete: () => {
     gsap.set(".hreflink", { clearProps: "all" }); // removes all inline styles set by GSAP
   }
+
    
 })
-timeLineGsap.from('.hero-bkground',{
-  translateX:1000,
-  rotate:90,
-  duration:1.5
-})
-timeLineGsap.from('.hero-bkground >div',{
-  opacity:0,
-  duration:1
-})
-})
+
+//
+
+//

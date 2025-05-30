@@ -15,6 +15,9 @@
  --radius-10:10px;
 --shadow-card:0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.07);
 }
+body{
+  overflow-x:hidden;
+}
 .container{
   @apply w-[90%] mx-auto p-0;
 }
